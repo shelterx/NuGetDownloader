@@ -12,7 +12,6 @@ $webClient = New-Object System.Net.WebClient
 function DownloadEntries {
  param ([string]$feedUrl) 
  $feed = [xml]$webClient.DownloadString($feedUrl)
- write-host $feedUrl
  $entries = $feed.feed.entry 
  $progress = 0
             
